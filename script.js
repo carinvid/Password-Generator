@@ -79,15 +79,17 @@ function generatePassword() {
   var resultArray = [];
   var userArray = [];
 
-  uppercaseArray[1];
+  uppercaseList[1];
   //-----------------------------------------------------------------
   var numCharacter = prompt(
-    "How much number of Character you want between 8 and 128?"
+    "How many numbers of Characters you would like for it?, Please choose between 8 and 128?"
   );
-  var numbers = confirm("you want numbers in your password?");
-  var uppercases = confirm("you want Uppercases in your password?");
-  var lowercases = confirm("you want lowercases in your password?");
-  var characters = confirm("you want special characters in your password?");
+  var numbers = confirm("Click OK if you want numbers in your password?");
+  var uppercases = confirm("Click OK you want Uppercases in your password?");
+  var lowercases = confirm("Click OK you want lowercases in your password?");
+  var characters = confirm(
+    "Click OK you want special characters in your password?"
+  );
 
   if (numbers) {
     resultArray = resultArray.concat(numbArray);
@@ -112,3 +114,12 @@ function generatePassword() {
 
   return userArray.join("");
 }
+
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+}
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
