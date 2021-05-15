@@ -81,9 +81,13 @@ function generatePassword() {
 
   uppercaseList[1];
   //-----------------------------------------------------------------
-  var numCharacter = prompt(
-    "How many characters you would like for it?, Please choose between 8 and 128?"
-  );
+  var numCharacter = prompt("How many characters you would like for it?,");
+  if (numCharacter < 8 && numCharacter < 128) {
+    window.alert("Please choose between 8 and 128");
+    window.prompt("Please try again");
+    document.getElementById().innerHTML;
+  }
+
   var numbers = confirm("Click OK if you want numbers in your password?");
   var uppercases = confirm("Click OK you want Uppercases in your password?");
   var lowercases = confirm("Click OK you want lowercases in your password?");
