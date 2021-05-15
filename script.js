@@ -82,7 +82,7 @@ function generatePassword() {
   uppercaseList[1];
   //-----------------------------------------------------------------
   var numCharacter = prompt(
-    "How many numbers of Characters you would like for it?, Please choose between 8 and 128?"
+    "How many characters you would like for it?, Please choose between 8 and 128?"
   );
   var numbers = confirm("Click OK if you want numbers in your password?");
   var uppercases = confirm("Click OK you want Uppercases in your password?");
@@ -92,19 +92,19 @@ function generatePassword() {
   );
 
   if (numbers) {
-    resultArray = resultArray.concat(numbArray);
+    resultArray = resultArray.concat(numbericList);
   }
 
   if (uppercases) {
-    resultArray = resultArray.concat(uppercaseArray);
+    resultArray = resultArray.concat(uppercaseList);
   }
 
   if (lowercases) {
-    resultArray = resultArray.concat(lowercaseArray);
+    resultArray = resultArray.concat(lowercaseList);
   }
 
   if (characters) {
-    resultArray = resultArray.concat(characterArray);
+    resultArray = resultArray.concat(characterList);
   }
   console.log(resultArray);
 
