@@ -77,18 +77,14 @@ function generatePassword() {
   var resultArray = [];
   var userArray = [];
 
-  uppercaseList[1];
-
   var passwordLength = prompt("How many characters you would like for it?,");
+  passwordLength = parseInt(passwordLength);
   if (passwordLength < 8 && passwordLength < 128) {
     window.alert("Please choose between 8 and 128");
-    window.prompt("Please try again");
-    document.getElementById().innerHTML;
+    // window.prompt("Please try again");
+    return generatePassword();
   }
 
-  var numbers = confirm("Click OK if you want numbers in your password?");
-  var uppercases = confirm("Click OK you want Uppercases in your password?");
-  var lowercases = confirm("Click OK you want lowercases in your password?");
   var symbols = confirm(
     "Click OK you want special characters in your password?"
   );
@@ -96,15 +92,15 @@ function generatePassword() {
   if (numbers) {
     resultArray = resultArray.concat(numbericList);
   }
-
+  var uppercases = confirm("Click OK you want Uppercases in your password?");
   if (uppercases) {
     resultArray = resultArray.concat(uppercaseList);
   }
-
+  var lowercases = confirm("Click OK you want lowercases in your password?");
   if (lowercases) {
     resultArray = resultArray.concat(lowercaseList);
   }
-
+  var numbers = confirm("Click OK if you want numbers in your password?");
   if (symbols) {
     resultArray = resultArray.concat(sysmbolList);
   }
